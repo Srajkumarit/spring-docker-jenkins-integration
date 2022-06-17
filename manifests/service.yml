@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "wingtiptoysakscluster-1fea"
+    labels:
+        app: "wingtiptoysakscluster-1fea"
+spec:
+    type: ClusterIP
+    ports:
+    - port: 8010
+      targetPort: 8010
+      protocol: TCP
+      name: http
+    selector:
+        app: "wingtiptoysakscluster-1fea"
