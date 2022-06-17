@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "wingtiptoysakscluster-1fea"
+    labels:
+        app: "wingtiptoysakscluster-1fea"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: docker-akscluster9f03-wingtiptoysakscluster-1fea.0a967246e50d4a6b8fac.centralus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "wingtiptoysakscluster-1fea"
+                servicePort: 8010
